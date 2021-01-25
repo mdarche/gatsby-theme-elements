@@ -1,11 +1,11 @@
 {
-  "name": "maker-ui",
+  "name": "@maker-ui/layout",
   "description": "The fastest way to build themeable, responsive layouts in React",
   "version": "1.0.0-beta.4",
   "license": "MIT",
   "author": "Mike Darche <mike@newcreative.io>",
   "main": "dist/index.js",
-  "module": "dist/maker-ui.esm.js",
+  "module": "dist/layout.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -17,8 +17,11 @@
     "test": "tsdx test"
   },
   "dependencies": {
-    "@maker-ui/layout": "*",
+    "@emotion/react": "^11.1.2",
+    "@maker-ui/css": "*",
     "@maker-ui/primitives": "*",
+    "deepmerge": "^4.2.2",
+    "resize-observer-polyfill": "^1.5.1",
     "tslib": "^2.0.0"
   },
   "peerDependencies": {

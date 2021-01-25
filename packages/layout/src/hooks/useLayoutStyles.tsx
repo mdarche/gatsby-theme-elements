@@ -69,7 +69,7 @@ export function useLayoutStyles(layout: LayoutString): object {
     }
 
     /**Determine the transform direction for toggling on mobile */
-    const getTransform = (width) => {
+    const getTransform = width => {
       const w = Array.isArray(width) ? width[sideNav.bpIndex] : width
       const shift = layout === 'sidenav content' ? `-${w}` : w
       return `translateX(${format(shift)})`

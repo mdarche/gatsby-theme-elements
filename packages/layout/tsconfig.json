@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "importHelpers": true,
+    "rootDir": "src"
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.js"],
+  "exclude": ["src/**/*.test.ts"]
+}

@@ -74,7 +74,7 @@ function useLayout(
   }
 
   function setLayout(newLayout: LayoutString) {
-    setState((state) => ({ ...state, [`layout_${type}`]: newLayout }))
+    setState(state => ({ ...state, [`layout_${type}`]: newLayout }))
   }
 
   return type === 'workspace'
@@ -105,7 +105,7 @@ function useMeasurements() {
   }
 
   function setMeasurement(key: 'topbar' | 'header' | 'toolbar', value: number) {
-    setState((state) => ({ ...state, [`height_${key}`]: value }))
+    setState(state => ({ ...state, [`height_${key}`]: value }))
   }
 
   return { measurements, setMeasurement }
@@ -135,7 +135,7 @@ function getLayoutType(
   if (nodes) {
     currentLayout = layoutString(
       nodes
-        .map((child) =>
+        .map(child =>
           child.type.displayName
             ? child.type.displayName.toLowerCase()
             : 'unknown'
@@ -169,8 +169,8 @@ function useLayoutDetector(
       const currentLayout = getLayoutType(type, children)
       const isValidLayout =
         type === 'content'
-          ? contentTypes.find((v) => v === currentLayout)
-          : workspaceTypes.find((v) => v === currentLayout)
+          ? contentTypes.find(v => v === currentLayout)
+          : workspaceTypes.find(v => v === currentLayout)
 
       if (isValidLayout) {
         if (layout !== currentLayout) {

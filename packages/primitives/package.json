@@ -4,7 +4,7 @@
   "author": "Mike Darche <mike@newcreative.io>",
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "dist/css.esm.js",
+  "module": "dist/primitives.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "cross-env NODE_ENV=production tsdx build --format=cjs,esm",
